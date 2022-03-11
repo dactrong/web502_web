@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import logo from './logo.svg'
+import Box from './components/showEag'
+import Boox from './components/showName'
 import './App.css'
 
 const ShowInfo = (props) => {
@@ -19,12 +21,12 @@ function App() {
   }
 
   return <div>
+   <h2>Demo State basic </h2> <hr />
 
-
-    String:<div style={{ background: color, width: 100, height: 100 }}>Conten</div>
+     String:  <Box color={color} /><br />
     <br />
-    <button onClick={() => setColor(color + "red")}> Color</button>
-    Boolean:{myStatus ? "Đã kết hôn" : "Chưa kết hôn"} <br />
+    <button onClick={() => setColor("red")}> Color</button> <br />
+    Boolean: <Boox myStatus={myStatus}/> <br />
     <hr />
     Number:{count} <br /> <button onClick={() => setCount(count + 1)}  >  Click  </button>
 
