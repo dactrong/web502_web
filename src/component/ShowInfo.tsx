@@ -10,7 +10,7 @@ import {Product} from '../type/product'
        console.log(props);
        
         return (
-            <div>ShowInfo</div>
+            <div>Nguyen Dac Trong</div>
         )
     }
     
