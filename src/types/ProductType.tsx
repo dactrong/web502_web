@@ -4,3 +4,9 @@ export type ProductType ={
     price:Number,
     category:any
 }
+export type UserType ={
+    _id?:any,
+    name:String,
+    email:String,
+    password:String,
+}

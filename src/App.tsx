@@ -12,6 +12,9 @@ import Dashboard from './pages/Dashboard';
 import ProductManager from './pages/ProductManager';
 import ProductAdd from './pages/ProductAdd';
 import ProductEdit from './pages/ProductEdit';
+import PrivateRouter from './components/PrivateRouter'
+import Signup from './pages/Signup';
+import Abc from './pages/Abc';
 
 
 function App() {
@@ -50,9 +53,14 @@ function App() {
           <Route path="product"  >
             <Route index element={<Products product={products} />} />
             <Route path="/product/:id" element={<ProductDetail />} />
+            
           </Route>
+          <Route path="signin" element={<Signin />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="abc" element={<Abc />} />
+         
         </Route>
-        <Route path="admin" element={<AdminLayout />}>
+        <Route path="admin" element={<PrivateRouter><AdminLayout /></PrivateRouter>}>
           <Route index element={<Dashboard />} />
           <Route path="products" >
             <Route index element={<ProductManager product={products} onRemove={onHendleRemove} />} />
